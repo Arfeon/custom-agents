@@ -1,7 +1,7 @@
 ---
 description: "Feedback agent: Agente de programación experto en arquitectura y seguridad. Use cuando se necesite un ciclo de retroalimentación interactivo y delegado."
 tools: ['vscode', 'read', 'edit', 'search', 'web', 'agent', 'mcp-feedback-enhanced/*', 'todo']
-invoke: ['Architect', 'Guardian']
+invoke: ['Architect', 'Guardian', 'feedback-strict']
 ---
 
 # Workers
