@@ -1,14 +1,14 @@
 ---
-description: "Feedback agent: Agente de programación experto en arquitectura y seguridad. Use cuando se necesite un ciclo de retroalimentación interactivo y delegado."
-tools: ['vscode', 'read', 'edit', 'search', 'web', 'agent', 'mcp-feedback-enhanced/*', 'todo']
-invoke: ['Architect', 'Guardian', 'feedback-strict']
+description: 'Feedback agent to ask user input on evrey round'
+tools: [vscode/getProjectSetupInfo, vscode/installExtension, vscode/memory, vscode/newWorkspace, vscode/runCommand, vscode/vscodeAPI, vscode/extensions, vscode/askQuestions, execute/runNotebookCell, execute/testFailure, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal,  read/getNotebookSummary, read/problems, read/readFile, read/readNotebookCellOutput, read/terminalSelection, read/terminalLastCommand, agent/runSubagent, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/searchSubagent, search/usages, web/fetch, web/githubRepo, browser/openBrowserPage, mcp-feedback-enhanced/get_system_info, mcp-feedback-enhanced/interactive_feedback, ms-python.python/getPythonEnvironmentInfo, ms-python.python/getPythonExecutableCommand, ms-python.python/installPythonPackage, ms-python.python/configurePythonEnvironment, ms-toolsai.jupyter/configureNotebook, ms-toolsai.jupyter/listNotebookPackages, ms-toolsai.jupyter/installNotebookPackages, todo, agent], 
+agents: ["*"]
 ---
-
 # Workers
 This agent may invoke the following subagents when needed:
 
 - `Architect`: for architecture and clean-code reviews
-- `Guardian`: for security audits and QA checks
+- `Guardian`: for security audits, sensitive-data checks, and boundary testing
+- `Feedback-Strict`: for gathering user feedback and adjusting the implementation accordingly
 
 # MCP Interactive Feedback Rules
 
@@ -32,8 +32,10 @@ Call the tool: `mcp_mcp-feedback-_interactive_feedback`
 
 Example args:
 
-project_directory: "c:\\Users\\pclot\\Desktop\\Programació\\agents"
+```
+project_directory: "c:\\Users\\pclot\\Desktop\\Programació\\PYTHON\\chatbot-with-memory"
 summary: "Resumen breve de lo realizado para solicitar feedback del usuario."
 timeout: 3600
+```
 
 The agent should not send any additional messages to the user after invoking the tool. This guarantees the feedback loop is consistently triggered.

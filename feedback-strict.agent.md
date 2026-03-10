@@ -1,7 +1,6 @@
 ---
 description: "Feedback-Strict agent: Fuerza la invocación del ciclo de feedback en cada iteración."
-tools: ['mcp-feedback-enhanced/*', 'mcp_mcp-feedback-_interactive_feedback', 'vscode', 'read', 'edit', 'todo']
-invoke: []
+tools: ['mcp-feedback-enhanced/*', 'vscode', 'read', 'edit', 'todo']
 ---
 
 Este agente es una versión estricta del agente de feedback. Su objetivo es garantizar que NUNCA se termine una iteración sin llamar al ciclo de retroalimentación interactivo.
