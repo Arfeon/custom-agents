@@ -106,8 +106,7 @@ Before recommending an architecture, use `search/codebase` or `search/fileSearch
 **Ports**: interfaces owned by the application core. Define what the outside world must provide.
 **Adapters**: implementations of ports. They live in the infrastructure layer.
 
-```
-// Port (defined in domain)
+```// Port (defined in domain)
 interface UserRepository {
   findById(id: UserId): Promise<User | null>
 }
