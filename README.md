@@ -41,7 +41,7 @@ On-demand knowledge files loaded via `readFile()`. Each skill activates speciali
 ### Via npx from GitHub
 
 ```bash
-npx github:YOUR_USERNAME/agents
+npx github:Arfeon/custom-agents
 ```
 
 Run this command from the root of any project. No npm publish required.
