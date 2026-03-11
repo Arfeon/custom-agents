@@ -1,0 +1,21 @@
+{
+  "name": "copilot-agents",
+  "version": "1.0.0",
+  "description": "VS Code Copilot custom agents and skills — install with npx to any project",
+  "type": "module",
+  "bin": {
+    "copilot-agents": "./bin/setup.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "AGENTS.md",
+    ".github/copilot-instructions.md",
+    ".github/agents/",
+    "INDEX.md"
+  ],
+  "keywords": ["copilot", "vscode", "agents", "skills", "ai"],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
