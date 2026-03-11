@@ -4,7 +4,7 @@
 ```
 readFile: skills/observability.SKILL.md
 ```
-Load before implementing any logging, monitoring, alerting, metrics, or tracing in a service.
+Load before implementing any logging, monitoring, alerting, or tracing in a service.
 
 ---
 

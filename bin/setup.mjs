@@ -74,8 +74,8 @@ function run() {
     }
   }
 
-  // 4. skills/ → project root/skills/ (on-demand knowledge files)
-  copyDir(join(SRC, 'skills'), join(DEST, 'skills'));
+  // 4. skills/ → .github/skills/ (on-demand knowledge files)
+  copyDir(join(SRC, 'skills'), join(githubDir, 'skills'));
 
   // 5. INDEX.md → .github/copilot-agents.md (reference)
   copyFile(join(SRC, 'INDEX.md'), join(githubDir, 'copilot-agents.md'));
@@ -93,7 +93,7 @@ function run() {
   console.log();
   console.log(`  Agents (chat):   ${join(githubDir, 'agents')}`);
   console.log(`  Agents (modes):  ${githubDir}`);
-  console.log(`  Skills:          ${join(DEST, 'skills')}`);
+  console.log(`  Skills:          ${join(githubDir, 'skills')}`);
   console.log(`  Universal:       ${join(DEST, 'AGENTS.md')}`);
   console.log(`${YELLOW}Legend:${RESET} ${GREEN}+${RESET} new file  ${YELLOW}↺${RESET} updated`);
   console.log();
