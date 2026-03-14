@@ -13,6 +13,7 @@ Load when the user asks to write tests, or when Guardian identifies untested are
 - Guardian flags an area as lacking test coverage
 - User adds a new function, class, or API endpoint
 - User asks about mocking, test doubles, or test setup
+- **You are about to write any test code**
 
 ---
 

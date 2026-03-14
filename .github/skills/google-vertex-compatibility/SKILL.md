@@ -10,6 +10,12 @@ user-invocable: true
 ## Purpose
 Convert existing ML code into Google Cloud compatible implementations with concrete file edits, migration steps, and runnable commands.
 
+## Trigger Conditions
+- User says "make it work with Google" or asks about Vertex AI
+- User asks for GCP training, serving, or MLOps flows
+- **You are about to write or adapt any ML code for Google Cloud**
+- GCP ML Expert agent is invoked for cloud migration
+
 ## When to Use
 - User says: make it work with Google.
 - User asks for Vertex AI migration from local scripts.

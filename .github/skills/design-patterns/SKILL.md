@@ -14,6 +14,7 @@ Load when designing or reviewing code where complexity, variability, or extensib
 - User needs to decouple components
 - User asks "how to structure this" or "is there a better way"
 - Code is hard to extend without modifying existing classes
+- **You are about to implement a non-trivial abstraction and need to choose a pattern**
 
 ---
 

@@ -14,6 +14,7 @@ Load this skill **before answering any question about a library, framework, or p
 - User migrates from one version to another
 - User has an import error or unexpected behavior with a dependency
 - User asks "is X still supported" or "what's the latest way to do Y with Z"
+- **You are about to write code using any external library or framework API**
 
 ---
 
