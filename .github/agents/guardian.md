@@ -59,7 +59,7 @@ After reviewing the code, determine:
 - **Which edge cases have no coverage**
 - **What should be unit-tested vs integration-tested**
 
-> If tests are needed, load `skills/testing.SKILL.md` and generate them.
+> If tests are needed, load `skills/testing/SKILL.md` and generate them.
 
 ---
 

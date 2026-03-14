@@ -32,20 +32,20 @@ Agents live in `.github/agents/`. Call them with `@agent-name` in Copilot Chat.
 
 ## Available Skills
 
-Load a skill with `readFile("skills/<name>.SKILL.md")` before responding to relevant tasks.
+Load a skill with `readFile("skills/<name>/SKILL.md")` before responding to relevant tasks.
 
 | Skill | Load when... |
 |---|---|
-| `skills/agent-delegation.SKILL.md` | Deciding which agent to invoke and what to pass it. |
-| `skills/design-patterns.SKILL.md` | Complexity, variability, or extensibility concern detected. |
-| `skills/code-architecture.SKILL.md` | Structuring a module, detecting architecture, deciding where logic belongs. |
-| `skills/context7.SKILL.md` | Any library/framework/package API question. Never answer from memory. |
-| `skills/debugging.SKILL.md` | Bug, error, or unexpected behavior reported by the user. |
-| `skills/api-design.SKILL.md` | Designing or reviewing REST endpoints, HTTP handlers. |
-| `skills/testing.SKILL.md` | Writing tests or identifying coverage gaps. |
-| `skills/git-workflow.SKILL.md` | Commits, branches, PRs, merging, versioning. |
-| `skills/observability.SKILL.md` | Logging, metrics, tracing, monitoring. |
-| `skills/resilience-patterns.SKILL.md` | External API calls, fault tolerance, retries, circuit breakers. |
+| `skills/agent-delegation/SKILL.md` | Deciding which agent to invoke and what to pass it. |
+| `skills/design-patterns/SKILL.md` | Complexity, variability, or extensibility concern detected. |
+| `skills/code-architecture/SKILL.md` | Structuring a module, detecting architecture, deciding where logic belongs. |
+| `skills/context7/SKILL.md` | Any library/framework/package API question. Never answer from memory. |
+| `skills/debugging/SKILL.md` | Bug, error, or unexpected behavior reported by the user. |
+| `skills/api-design/SKILL.md` | Designing or reviewing REST endpoints, HTTP handlers. |
+| `skills/testing/SKILL.md` | Writing tests or identifying coverage gaps. |
+| `skills/git-workflow/SKILL.md` | Commits, branches, PRs, merging, versioning. |
+| `skills/observability/SKILL.md` | Logging, metrics, tracing, monitoring. |
+| `skills/resilience-patterns/SKILL.md` | External API calls, fault tolerance, retries, circuit breakers. |
 
 ---
 

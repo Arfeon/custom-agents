@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/resilience-patterns.SKILL.md
+readFile: skills/resilience-patterns/SKILL.md
 ```
 Load before implementing any retry logic, timeout handling, fallback behavior, or fault-tolerance mechanism in a distributed system.
 

@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/debugging.SKILL.md
+readFile: skills/debugging/SKILL.md
 ```
 Load this skill when the user reports a bug, error, or unexpected behavior.
 

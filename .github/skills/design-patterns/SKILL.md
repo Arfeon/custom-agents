@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/design-patterns.SKILL.md
+readFile: skills/design-patterns/SKILL.md
 ```
 Load when designing or reviewing code where complexity, variability, or extensibility is a concern.
 

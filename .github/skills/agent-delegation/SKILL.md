@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/agent-delegation.SKILL.md
+readFile: skills/agent-delegation/SKILL.md
 ```
 Load this skill before deciding whether to delegate to a subagent. It defines when, how, and what to pass to each specialized agent.
 
@@ -32,6 +32,10 @@ Does the code handle external input, secrets, auth, or sensitive data?
         ▼
 Does the request involve deployment, CI/CD, containers, or IaC?
   YES → invoke DevOps
+        │
+        ▼
+Is the request about ML frameworks (TensorFlow/Keras/PyTorch) or Google/Vertex AI compatibility?
+  YES → invoke GCP ML Expert
         │
         ▼
 Can you answer the remaining part confidently?
@@ -110,6 +114,27 @@ Can you answer the remaining part confidently?
 - The current pipeline/infra state if it exists
 - Deployment requirements (zero-downtime? rollback speed? canary?)
 - Any compliance or security constraints (SOC2, HIPAA, etc.)
+```
+
+---
+
+### `GCP ML Expert`
+**Invoke when**:
+- User requests TensorFlow/Keras/PyTorch implementation or troubleshooting
+- User asks to migrate ML workflows to Google Cloud or Vertex AI
+- User asks to make existing ML code "work on Google"
+- User needs adapter classes or cloud-compatible training/serving flows
+
+**Do NOT invoke for**:
+- Generic cloud infrastructure without ML context (use DevOps)
+- Non-ML library API questions (use Context7 skill)
+
+**What to pass**:
+```
+- Current ML framework and version constraints
+- Existing training/serving code paths and execution mode
+- Target Google flow (training, tuning, deployment, prediction)
+- Security constraints: IAM, service accounts, secrets, data locations
 ```
 
 ---

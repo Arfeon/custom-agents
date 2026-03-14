@@ -19,31 +19,31 @@ Skills are knowledge files loaded on-demand via `readFile`. They inject instruct
 
 | Skill | File | Purpose |
 |---|---|---|
-| **Agent Delegation** | `skills/agent-delegation.SKILL.md` | When and how to invoke each agent. Decision tree, context to pass, chaining patterns. |
+| **Agent Delegation** | `skills/agent-delegation/SKILL.md` | When and how to invoke each agent. Decision tree, context to pass, chaining patterns. |
 
 ### Architecture & Patterns
 
 | Skill | File | Purpose |
 |---|---|---|
-| **Design Patterns** | `skills/design-patterns.SKILL.md` | GoF patterns (Creational / Structural / Behavioral). When to use each. Anti-patterns. |
-| **Code Architecture** | `skills/code-architecture.SKILL.md` | Layered, Clean Architecture, Hexagonal, DDD. Placement rules for every type of logic. |
+| **Design Patterns** | `skills/design-patterns/SKILL.md` | GoF patterns (Creational / Structural / Behavioral). When to use each. Anti-patterns. |
+| **Code Architecture** | `skills/code-architecture/SKILL.md` | Layered, Clean Architecture, Hexagonal, DDD. Placement rules for every type of logic. |
 
 ### Development
 
 | Skill | File | Purpose |
 |---|---|---|
-| **Context7** | `skills/context7.SKILL.md` | Fetch live library docs via Context7 MCP. Never answer library questions from memory. |
-| **Debugging** | `skills/debugging.SKILL.md` | 5-phase debugging protocol: understand → locate → diagnose → fix → validate. |
-| **API Design** | `skills/api-design.SKILL.md` | REST: HTTP methods, status codes, pagination, response envelopes, security checklist. |
-| **Testing** | `skills/testing.SKILL.md` | Unit/integration/e2e strategy, AAA pattern, mocking/doubles, edge cases checklist. |
-| **Git Workflow** | `skills/git-workflow.SKILL.md` | Conventional Commits, branch naming, merge strategies, SemVer tagging. |
+| **Context7** | `skills/context7/SKILL.md` | Fetch live library docs via Context7 MCP. Never answer library questions from memory. |
+| **Debugging** | `skills/debugging/SKILL.md` | 5-phase debugging protocol: understand → locate → diagnose → fix → validate. |
+| **API Design** | `skills/api-design/SKILL.md` | REST: HTTP methods, status codes, pagination, response envelopes, security checklist. |
+| **Testing** | `skills/testing/SKILL.md` | Unit/integration/e2e strategy, AAA pattern, mocking/doubles, edge cases checklist. |
+| **Git Workflow** | `skills/git-workflow/SKILL.md` | Conventional Commits, branch naming, merge strategies, SemVer tagging. |
 
 ### Infrastructure
 
 | Skill | File | Purpose |
 |---|---|---|
-| **Observability** | `skills/observability.SKILL.md` | Structured logging, metrics (Prometheus), OpenTelemetry tracing, SLI/SLO. |
-| **Resilience Patterns** | `skills/resilience-patterns.SKILL.md` | Timeout, Retry+backoff+jitter, Circuit Breaker, Bulkhead, Rate Limiter, Fallback. |
+| **Observability** | `skills/observability/SKILL.md` | Structured logging, metrics (Prometheus), OpenTelemetry tracing, SLI/SLO. |
+| **Resilience Patterns** | `skills/resilience-patterns/SKILL.md` | Timeout, Retry+backoff+jitter, Circuit Breaker, Bulkhead, Rate Limiter, Fallback. |
 
 ---
 
@@ -67,7 +67,8 @@ my-project/
 │       ├── guardian.md                 (@guardian)
 │       └── devops.md                   (@devops)
 └── skills/
-    └── *.SKILL.md
+    └── <skill>/
+        └── SKILL.md
 ```
 
 **Two agent systems, both installed:**
@@ -90,7 +91,7 @@ Both systems use the same agents — same instructions, different entry points.
 ## How to Use a Skill
 
 ```
-readFile("skills/<skill-name>.SKILL.md")
+readFile("skills/<skill-name>/SKILL.md")
 → read the Trigger Conditions
 → if triggered, follow its instructions before responding
 ```

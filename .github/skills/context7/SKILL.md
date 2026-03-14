@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/context7.SKILL.md
+readFile: skills/context7/SKILL.md
 ```
 Load this skill **before answering any question about a library, framework, or package.** Training data is stale. This is not optional.
 

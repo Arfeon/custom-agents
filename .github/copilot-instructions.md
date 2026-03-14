@@ -26,22 +26,22 @@ The following custom agents are configured for this workspace. See [INDEX.md](..
 
 ## Skills Available
 
-Load a skill with `readFile("skills/<name>.SKILL.md")` when relevant. Full list: [INDEX.md](../INDEX.md).
+Load a skill with `readFile("skills/<name>/SKILL.md")` when relevant. Full list: [INDEX.md](../INDEX.md).
 
 Quick reference:
 
 | Need | Load |
 |---|---|
-| Library/framework docs | `skills/context7.SKILL.md` |
-| Design pattern selection | `skills/design-patterns.SKILL.md` |
-| Project structure / architecture | `skills/code-architecture.SKILL.md` |
-| Debugging a bug or error | `skills/debugging.SKILL.md` |
-| REST API design or review | `skills/api-design.SKILL.md` |
-| Writing tests | `skills/testing.SKILL.md` |
-| Logging / metrics / tracing | `skills/observability.SKILL.md` |
-| Fault tolerance / retries | `skills/resilience-patterns.SKILL.md` |
-| Which agent to invoke | `skills/agent-delegation.SKILL.md` |
-| Git commits / branches / PRs | `skills/git-workflow.SKILL.md` |
+| Library/framework docs | `skills/context7/SKILL.md` |
+| Design pattern selection | `skills/design-patterns/SKILL.md` |
+| Project structure / architecture | `skills/code-architecture/SKILL.md` |
+| Debugging a bug or error | `skills/debugging/SKILL.md` |
+| REST API design or review | `skills/api-design/SKILL.md` |
+| Writing tests | `skills/testing/SKILL.md` |
+| Logging / metrics / tracing | `skills/observability/SKILL.md` |
+| Fault tolerance / retries | `skills/resilience-patterns/SKILL.md` |
+| Which agent to invoke | `skills/agent-delegation/SKILL.md` |
+| Git commits / branches / PRs | `skills/git-workflow/SKILL.md` |
 
 ---
 

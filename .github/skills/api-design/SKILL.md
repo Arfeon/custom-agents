@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/api-design.SKILL.md
+readFile: skills/api-design/SKILL.md
 ```
 Load this skill when the user designs, creates, or reviews REST endpoints, controllers, or HTTP handlers.
 

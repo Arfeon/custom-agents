@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/git-workflow.SKILL.md
+readFile: skills/git-workflow/SKILL.md
 ```
 Load this skill when the user asks about commits, branches, PRs, merging, or version tagging.
 
