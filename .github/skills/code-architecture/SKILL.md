@@ -15,6 +15,7 @@ Load when structuring a new project, reviewing an existing codebase's architectu
 - Code is hard to test because it's coupled to the database, HTTP, or external services
 - User asks about layers, hexagonal, clean architecture, DDD
 - User asks where a specific piece of logic "belongs"
+- **You are about to create a new file, module, or service and need to decide where it goes**
 
 ---
 

@@ -26,7 +26,9 @@ The following custom agents are configured for this workspace. See [INDEX.md](..
 
 ## Skills Available
 
-Load a skill with `readFile("skills/<name>/SKILL.md")` when relevant. Full list: [INDEX.md](../INDEX.md).
+Load a skill with `readFile("skills/<name>/SKILL.md")` **before responding OR before performing** any action covered by that skill. Full list: [INDEX.md](../INDEX.md).
+
+> **Rule**: if you are about to do a git commit, call a library API, design an endpoint, or implement a pattern — load the relevant skill first, even if the user didn't explicitly ask about it.
 
 Quick reference:
 

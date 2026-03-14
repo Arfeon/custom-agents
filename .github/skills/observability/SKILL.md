@@ -14,6 +14,7 @@ Load before implementing any logging, monitoring, alerting, or tracing in a serv
 - User needs to trace a request across multiple services
 - User asks about structured logs, log levels, or log aggregation
 - User debugs a production issue with no visibility into what happened
+- **You are about to add logging, metrics, or tracing to any code**
 
 ---
 

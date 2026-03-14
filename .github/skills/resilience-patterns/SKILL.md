@@ -13,6 +13,7 @@ Load before implementing any retry logic, timeout handling, fallback behavior, o
 - User asks about handling failures, timeouts, or degraded dependencies
 - User needs to protect a service from cascading failures
 - User designs a system that must maintain availability under partial failures
+- **You are about to implement any call to an external service, DB, or message queue**
 
 ---
 

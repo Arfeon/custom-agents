@@ -13,6 +13,7 @@ Load this skill when the user designs, creates, or reviews REST endpoints, contr
 - User asks to review an existing API
 - User asks about HTTP methods, status codes, or response format
 - User designs a new service with a public interface
+- **You are about to implement or review any HTTP endpoint or handler**
 
 ---
 

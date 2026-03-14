@@ -8,7 +8,11 @@ Load this skill before deciding whether to delegate to a subagent. It defines wh
 
 ---
 
-## Core Principle
+## Trigger Conditions
+- You are unsure which agent to invoke for the user's request
+- The task involves multiple domains (design + security, or ML + cloud, etc.)
+- **You are about to invoke any subagent** — always load this first to confirm the right choice
+- User asks which agent handles a specific type of task
 
 **Delegate early, not late.** If a request requires specialized expertise, invoke the right agent upfront — don't attempt it yourself and call the agent only after failing.
 

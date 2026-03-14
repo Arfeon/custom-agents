@@ -41,6 +41,9 @@ Do NOT invoke Guardian automatically after every change.
 
 Skills provide domain-specific knowledge. **Read the skill file with `readFile` before responding** when any trigger condition is met.
 
+> **Rule**: load a skill BEFORE performing the action it covers — not only when the user asks about it.
+> Example: if you are about to run a git commit, load `git-workflow` first. If you are about to design an endpoint, load `api-design` first.
+
 ## Orchestration
 
 | Skill | File | Load when... |
@@ -58,11 +61,11 @@ Skills provide domain-specific knowledge. **Read the skill file with `readFile` 
 
 | Skill | File | Load when... |
 |---|---|---|
-| **Context7** | `skills/context7/SKILL.md` | User asks about any library, framework, or package API. Never answer from training data alone. |
+| **Context7** | `skills/context7/SKILL.md` | User asks about or you need to use any library, framework, or package API. Never answer from training data alone. |
 | **Debugging** | `skills/debugging/SKILL.md` | User reports a bug, error, or unexpected behavior. |
-| **API Design** | `skills/api-design/SKILL.md` | User designs or reviews REST endpoints, controllers, or HTTP handlers. |
-| **Git Workflow** | `skills/git-workflow/SKILL.md` | User asks about commits, branches, PRs, merging, or version tagging. |
-| **Testing** | `skills/testing/SKILL.md` | User asks how to test code, write tests, or Guardian identifies untested areas. |
+| **API Design** | `skills/api-design/SKILL.md` | User asks about or you are about to design/review REST endpoints or HTTP handlers. |
+| **Git Workflow** | `skills/git-workflow/SKILL.md` | User asks about or you are about to perform any git operation: commit, branch, PR, merge, tag. |
+| **Testing** | `skills/testing/SKILL.md` | User asks about or you are about to write tests. |
 
 ## Infrastructure
 

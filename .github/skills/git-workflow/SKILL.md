@@ -13,6 +13,7 @@ Load this skill when the user asks about commits, branches, PRs, merging, or ver
 - User asks about PR creation, merge strategy, or rebasing
 - User asks about versioning or tagging a release
 - User needs help writing a commit message
+- **You are about to run any git operation** (commit, push, branch, tag, merge)
 
 ---
 
