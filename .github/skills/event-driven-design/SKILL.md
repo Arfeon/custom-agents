@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/event-driven-design.SKILL.md
+readFile: skills/event-driven-design/SKILL.md
 ```
 Load when the user designs or implements asynchronous messaging, event sourcing, CQRS, or any system where components communicate via events/messages.
 

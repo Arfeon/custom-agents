@@ -65,7 +65,8 @@ your-project/
 │       └── devops.md              ← @devops
 └── .github/
     └── skills/
-        └── *.SKILL.md
+        └── <skill>/
+            └── SKILL.md
 ```
 
 ---
@@ -90,7 +91,7 @@ Open the agent mode dropdown in the Copilot chat panel and select `feedback`, `a
 Agents load skill files when trigger conditions are detected. You can also load them manually:
 
 ```
-readFile(".github/skills/debugging.SKILL.md")
+readFile(".github/skills/debugging/SKILL.md")
 ```
 
 ---

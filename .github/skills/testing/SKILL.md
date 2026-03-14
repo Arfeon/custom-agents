@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/testing.SKILL.md
+readFile: skills/testing/SKILL.md
 ```
 Load when the user asks to write tests, or when Guardian identifies untested areas in reviewed code.
 

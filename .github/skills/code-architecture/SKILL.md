@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/code-architecture.SKILL.md
+readFile: skills/code-architecture/SKILL.md
 ```
 Load when structuring a new project, reviewing an existing codebase's architecture, or deciding how to organize modules, layers, and dependencies.
 

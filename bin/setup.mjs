@@ -60,39 +60,35 @@ function run() {
     join(githubDir, 'copilot-instructions.md')
   );
 
-  // 3. Agents — single source (.github/agents/), generate two targets:
-  //    a) .github/agents/*.md    → GitHub Copilot Chat @agent-name
-  //    b) .github/*.agent.md     → VS Code custom mode picker
+  // 3. Agents — single source and single target:
+  //    .github/agents/*.md       → GitHub Copilot Chat @agent-name
   const srcAgentsDir = join(SRC, '.github', 'agents');
   const destAgentsDir = join(githubDir, 'agents');
   ensureDir(destAgentsDir);
   for (const entry of readdirSync(srcAgentsDir)) {
-    if (entry.endsWith('.md')) {
-      const baseName = entry.replace('.md', '');
+    // Only copy canonical source files and skip generated *.agent.md artifacts.
+    if (entry.endsWith('.md') && !entry.endsWith('.agent.md')) {
       copyFile(join(srcAgentsDir, entry), join(destAgentsDir, entry));
-      copyFile(join(srcAgentsDir, entry), join(githubDir, `${baseName}.agent.md`));
     }
   }
 
-  // 4. skills/ → .github/skills/ (on-demand knowledge files)
-  copyDir(join(SRC, 'skills'), join(githubDir, 'skills'));
+  // 4. .github/skills/ → .github/skills/ (on-demand knowledge files)
+  copyDir(join(SRC, '.github', 'skills'), join(githubDir, 'skills'));
 
   // 5. INDEX.md → .github/copilot-agents.md (reference)
   copyFile(join(SRC, 'INDEX.md'), join(githubDir, 'copilot-agents.md'));
 
   console.log();
-  console.log(`${GREEN}${BOLD}Done.${RESET} Two agent systems installed:`);
+  console.log(`${GREEN}${BOLD}Done.${RESET} Copilot configuration installed:`);
   console.log();
   console.log(`  ${BOLD}GitHub Copilot Chat${RESET} — call via @agent-name:`);
-  console.log(`    ${BOLD}@feedback${RESET}   → main orchestrator (MCP feedback loop)`);
-  console.log(`    ${BOLD}@architect${RESET}  → design patterns, SOLID, refactoring`);
-  console.log(`    ${BOLD}@guardian${RESET}   → security audit + code evaluation`);
-  console.log(`    ${BOLD}@devops${RESET}     → CI/CD, containers, infrastructure`);
-  console.log();
-  console.log(`  ${BOLD}VS Code Mode Picker${RESET} — select in the mode dropdown (same agents).`);
+  console.log(`    ${BOLD}@feedback${RESET}      → main orchestrator (MCP feedback loop)`);
+  console.log(`    ${BOLD}@architect${RESET}     → design patterns, SOLID, refactoring`);
+  console.log(`    ${BOLD}@guardian${RESET}      → security audit + code evaluation`);
+  console.log(`    ${BOLD}@devops${RESET}        → CI/CD, containers, infrastructure`);
+  console.log(`    ${BOLD}@gcp-ml-expert${RESET} → TensorFlow/Keras/PyTorch + Vertex AI`);
   console.log();
   console.log(`  Agents (chat):   ${join(githubDir, 'agents')}`);
-  console.log(`  Agents (modes):  ${githubDir}`);
   console.log(`  Skills:          ${join(githubDir, 'skills')}`);
   console.log(`  Universal:       ${join(DEST, 'AGENTS.md')}`);
   console.log(`${YELLOW}Legend:${RESET} ${GREEN}+${RESET} new file  ${YELLOW}↺${RESET} updated`);

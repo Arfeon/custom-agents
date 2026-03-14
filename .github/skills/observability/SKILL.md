@@ -2,7 +2,7 @@
 
 ## Invocation
 ```
-readFile: skills/observability.SKILL.md
+readFile: skills/observability/SKILL.md
 ```
 Load before implementing any logging, monitoring, alerting, or tracing in a service.
 
