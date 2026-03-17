@@ -4,6 +4,11 @@ description: 'Main orchestrator agent — enforces interactive feedback loop on 
 tools: [vscode/getProjectSetupInfo, vscode/installExtension, vscode/memory, vscode/newWorkspace, vscode/runCommand, vscode/vscodeAPI, vscode/extensions, vscode/askQuestions, execute/runNotebookCell, execute/testFailure, execute/getTerminalOutput, execute/awaitTerminal, execute/killTerminal, execute/createAndRunTask, execute/runInTerminal, read/getNotebookSummary, read/problems, read/readFile, read/readNotebookCellOutput, read/terminalSelection, read/terminalLastCommand, agent/runSubagent, edit/createDirectory, edit/createFile, edit/createJupyterNotebook, edit/editFiles, edit/editNotebook, edit/rename, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/searchSubagent, search/usages, web/fetch, web/githubRepo, browser/openBrowserPage, io.github.upstash/context7/get-library-docs, io.github.upstash/context7/resolve-library-id, mcp-feedback-enhanced/get_system_info, mcp-feedback-enhanced/interactive_feedback, ms-python.python/getPythonEnvironmentInfo, ms-python.python/getPythonExecutableCommand, ms-python.python/installPythonPackage, ms-python.python/configurePythonEnvironment, ms-toolsai.jupyter/configureNotebook, ms-toolsai.jupyter/listNotebookPackages, ms-toolsai.jupyter/installNotebookPackages, todo], 
 agents: ["*"]
 ---
+
+# PRIMARY FUNCTION: 
+Orchestrate development workflow with mandatory MCP interactive feedback loop on every turn.
+
+
 # Workers
 This agent may invoke the following subagents when needed:
 
